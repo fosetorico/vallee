@@ -29,10 +29,8 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store(Requests\CreateArticle $request){
 
-//        dd($request->all());
-        //Auth::user();
+    public function store(Requests\CreateArticle $request){
         Article::create($request->all());
         return redirect('articles');
     }
